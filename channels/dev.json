@@ -1,23 +1,23 @@
 {
- "version": "2026.11.17.0931-fd9a6bc",
- "commit": "fd9a6bc",
+ "version": "2026.11.17.1004-8107393",
+ "commit": "8107393",
  "channel": "dev",
- "published_unix": 1794907903,
- "date": "17 Nov 2026, 09:31 UTC",
- "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.0931-fd9a6bc/game.pck",
- "sha256": "876164ce0837a7fd1a31f8e8e7cf9eb9f5f421e0902afaeb1d2ea92fedbd997e",
- "size": 434776,
+ "published_unix": 1794909857,
+ "date": "17 Nov 2026, 10:04 UTC",
+ "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.1004-8107393/game.pck",
+ "sha256": "6b93b2b8c92090c2a0eacdbf37c150fa1caae5637bccc4850d57124e5ee84d37",
+ "size": 468784,
  "server": "dev.valentin-ballesteros.site",
  "protocol": 3,
  "min_launcher": 1,
  "notes": [
+  "All four starters rebuilt on the old game's plate kit and materials (#15)",
   "Skirmisher v2: closer to MW5 lights (stance, faceted armour over frame, proportions, mid detail) (#14)",
   "Look pass: daylight world and materials, and the Skirmisher modelled in Blender scripts (#13)",
   "M1: MechWarrior engine speeds, control scheme setting, 1:1 gait port, arm IK, Skirmisher light (#12)",
   "MW5 study: point to section 15 (#11)",
   "MW5 study: Commando-equivalent light starter with full arms, arms section, light concept prompts (#10)",
   "MW5 study: community sources, mechlab details, control-scheme setting (#9)",
-  "M1 port plan: settings toggle between MW set-point throttle and the old game's held-key scheme (#8)",
-  "Research: MechWarrior 5 study with M1 calibration targets and starter-mech brief (#7)"
+  "M1 port plan: settings toggle between MW set-point throttle and the old game's held-key scheme (#8)"
  ]
 }

@@ -1,1 +1,17 @@
-{"version": "none", "pack_url": "", "notes": ["No dev build yet."]}
+{
+ "version": "2026.11.17.0646-61016e9",
+ "commit": "61016e9",
+ "channel": "dev",
+ "published_unix": 1794898007,
+ "date": "17 Nov 2026, 06:46 UTC",
+ "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.0646-61016e9/game.pck",
+ "sha256": "ed53148278cb8ddd1f51baf63eb5b37ff23cc559a4fd286577a567aabeeaf4a7",
+ "size": 20032,
+ "server": "dev.valentin-ballesteros.site",
+ "protocol": 1,
+ "min_launcher": 1,
+ "notes": [
+  "M0-2: Godot 4.7 scaffold, online test scene, private server with tester logins, CI publish (#1)",
+  "Overheat handoff: docs, roadmap and reference from the Mech game (17 Nov 2026)"
+ ]
+}

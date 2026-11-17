@@ -1,0 +1,51 @@
+# Push to main: when LAUNCHER_VERSION in scripts/launcher.gd is new, build the launcher pack and the
+# install kit, publish them as Release launcher-v<N>, and point channels/launcher.json at the pack
+# (installed launchers then update themselves). Game packs are published here by the private repo's CI.
+name: launcher
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["channels/**", "README.md"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: launcher
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Version
+        id: v
+        run: |
+          N=$(grep -oP 'const LAUNCHER_VERSION := \K[0-9]+' scripts/launcher.gd)
+          echo "n=$N" >> "$GITHUB_OUTPUT"
+          if gh release view "launcher-v$N" >/dev/null 2>&1; then echo "new=no" >> "$GITHUB_OUTPUT"; else echo "new=yes" >> "$GITHUB_OUTPUT"; fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Get Godot
+        if: steps.v.outputs.new == 'yes'
+        run: |
+          curl -sSLo g.zip https://github.com/godotengine/godot-builds/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          unzip -q g.zip -d ~/godot && rm g.zip
+          echo "GODOT=$HOME/godot/Godot_v4.7.2-stable_linux.x86_64" >> "$GITHUB_ENV"
+      - name: Build and publish
+        if: steps.v.outputs.new == 'yes'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          N=${{ steps.v.outputs.n }}
+          tools/make_kit.sh "$GODOT" build
+          if unzip -l build/Overheat-Launcher.zip | grep -qi server; then echo "::error::server files in the kit"; exit 1; fi
+          gh release create "launcher-v$N" build/launcher.pck build/Overheat-Launcher.zip \
+            --title "Launcher v$N" --notes "Install: download Overheat-Launcher.zip, unzip, run Overheat.exe. Installed launchers update themselves." --latest
+          SUM=$(sha256sum build/launcher.pck | cut -d' ' -f1)
+          printf '{"launcher": %d, "pck_url": "https://github.com/%s/releases/download/launcher-v%d/launcher.pck", "sha256": "%s", "kit_url": "https://github.com/%s/releases/download/launcher-v%d/Overheat-Launcher.zip"}\n' \
+            "$N" "$GITHUB_REPOSITORY" "$N" "$SUM" "$GITHUB_REPOSITORY" "$N" > channels/launcher.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add channels/launcher.json
+          git commit -m "launcher v$N"
+          git pull --rebase -q origin main && git push origin HEAD:main

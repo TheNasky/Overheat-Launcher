@@ -1,23 +1,23 @@
 {
- "version": "2026.11.17.1018-d3fa28d",
- "commit": "d3fa28d",
+ "version": "2026.11.17.1723-d131249",
+ "commit": "d131249",
  "channel": "dev",
- "published_unix": 1794910733,
- "date": "17 Nov 2026, 10:18 UTC",
- "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.1018-d3fa28d/game.pck",
- "sha256": "817dda8585169151b632944a68d170bda5f7ed675c40d3a3d0021258ea88088a",
- "size": 485852,
+ "published_unix": 1794936214,
+ "date": "17 Nov 2026, 17:23 UTC",
+ "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.1723-d131249/game.pck",
+ "sha256": "41eefdb8296a21ecb82f1105781e7f3bc48799f86e74092b5d65836d7579fe38",
+ "size": 493824,
  "server": "dev.valentin-ballesteros.site",
  "protocol": 4,
  "min_launcher": 1,
  "notes": [
+  "Starters rebuilt as armoured humanoids in the look of the night's MW redraws (#17)",
   "Weapons v1: fire groups, heat, hits, beams, shells, rockets, HUD (#16)",
   "All four starters rebuilt on the old game's plate kit and materials (#15)",
   "Skirmisher v2: closer to MW5 lights (stance, faceted armour over frame, proportions, mid detail) (#14)",
   "Look pass: daylight world and materials, and the Skirmisher modelled in Blender scripts (#13)",
   "M1: MechWarrior engine speeds, control scheme setting, 1:1 gait port, arm IK, Skirmisher light (#12)",
   "MW5 study: point to section 15 (#11)",
-  "MW5 study: Commando-equivalent light starter with full arms, arms section, light concept prompts (#10)",
-  "MW5 study: community sources, mechlab details, control-scheme setting (#9)"
+  "MW5 study: Commando-equivalent light starter with full arms, arms section, light concept prompts (#10)"
  ]
 }

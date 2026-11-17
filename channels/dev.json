@@ -1,23 +1,23 @@
 {
- "version": "2026.11.17.0849-2cfc214",
- "commit": "2cfc214",
+ "version": "2026.11.17.0921-cf88dcd",
+ "commit": "cf88dcd",
  "channel": "dev",
- "published_unix": 1794905370,
- "date": "17 Nov 2026, 08:49 UTC",
- "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.0849-2cfc214/game.pck",
- "sha256": "648c4b155ac397c14ca0047f2a2c5679101f8f0565e2c556f82853a9ba82b0aa",
- "size": 89348,
+ "published_unix": 1794907269,
+ "date": "17 Nov 2026, 09:21 UTC",
+ "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.0921-cf88dcd/game.pck",
+ "sha256": "1544751fd488a61d92928563217f2c9f188774558d6b1cea3e86e23fa580c344",
+ "size": 317408,
  "server": "dev.valentin-ballesteros.site",
  "protocol": 3,
  "min_launcher": 1,
  "notes": [
+  "Look pass: daylight world and materials, and the Skirmisher modelled in Blender scripts (#13)",
   "M1: MechWarrior engine speeds, control scheme setting, 1:1 gait port, arm IK, Skirmisher light (#12)",
   "MW5 study: point to section 15 (#11)",
   "MW5 study: Commando-equivalent light starter with full arms, arms section, light concept prompts (#10)",
   "MW5 study: community sources, mechlab details, control-scheme setting (#9)",
   "M1 port plan: settings toggle between MW set-point throttle and the old game's held-key scheme (#8)",
   "Research: MechWarrior 5 study with M1 calibration targets and starter-mech brief (#7)",
-  "Roadmap: movement follows the MW model (engine rating / tonnage for speed, per-chassis agility), not tonnage alone (#6)",
-  "M1 first pass: MWO throttle movement, torso twist, two reticles, test scene, client prediction; roadmap update (#5)"
+  "Roadmap: movement follows the MW model (engine rating / tonnage for speed, per-chassis agility), not tonnage alone (#6)"
  ]
 }

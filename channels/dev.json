@@ -1,23 +1,23 @@
 {
- "version": "2026.11.17.0819-8e4acb8",
- "commit": "8e4acb8",
+ "version": "2026.11.17.0831-308c5c2",
+ "commit": "308c5c2",
  "channel": "dev",
- "published_unix": 1794903604,
- "date": "17 Nov 2026, 08:20 UTC",
- "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.0819-8e4acb8/game.pck",
- "sha256": "3b0a39e072956058ce06ee67de4570e687472df848c84479ebd7fabc0a0aa5b7",
+ "published_unix": 1794904280,
+ "date": "17 Nov 2026, 08:31 UTC",
+ "pack_url": "https://github.com/TheNasky/Overheat-Launcher/releases/download/dev-2026.11.17.0831-308c5c2/game.pck",
+ "sha256": "7d64ac7044839c1aa154fe914937ce38c3c91494e6a388951c878ccf8723e0d2",
  "size": 43108,
  "server": "dev.valentin-ballesteros.site",
  "protocol": 2,
  "min_launcher": 1,
  "notes": [
+  "MW5 study: Commando-equivalent light starter with full arms, arms section, light concept prompts (#10)",
   "MW5 study: community sources, mechlab details, control-scheme setting (#9)",
   "M1 port plan: settings toggle between MW set-point throttle and the old game's held-key scheme (#8)",
   "Research: MechWarrior 5 study with M1 calibration targets and starter-mech brief (#7)",
   "Roadmap: movement follows the MW model (engine rating / tonnage for speed, per-chassis agility), not tonnage alone (#6)",
   "M1 first pass: MWO throttle movement, torso twist, two reticles, test scene, client prediction; roadmap update (#5)",
   "Server: re-read the build stamp after the script swap (was always dev-local) (#4)",
-  "Server: run from its own worktree (correct build stamp), pick up new testers without a restart (#3)",
-  "M0-5: host script for dev and stable servers on Nasky's PC, auto-update on push (#2)"
+  "Server: run from its own worktree (correct build stamp), pick up new testers without a restart (#3)"
  ]
 }

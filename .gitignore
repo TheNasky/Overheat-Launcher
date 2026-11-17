@@ -1,1 +1,4 @@
-reference/
+.godot/
+export/
+build/
+*.tmp

@@ -3,8 +3,13 @@
 The public launcher for **Overheat**. Players and testers install it once; it downloads the newest game
 pack for their channel and starts the game.
 
-**Status (17 Nov 2026): not started.** This folder becomes the **public** repo `TheNasky/Overheat-Launcher`.
-Built in milestone M0 (see `..\Overheat\docs\ROADMAP.md`). Read `..\Overheat\HANDOFF.md` first.
+**Status: M0.** Launcher v1 with Stable/Dev channels, tester login, self-update and a CI-built install kit.
+
+**Install:** download `Overheat-Launcher.zip` from the latest `launcher-v*` release, unzip, run `Overheat.exe`.
+
+Dev notes: Godot 4.7.2 project at the repo root (`scripts/launcher.gd`). Bump `LAUNCHER_VERSION` and push to
+`main` to publish a new launcher (`.github/workflows/launcher.yml`). Test against local manifests with
+`-- --channels=http://127.0.0.1:PORT --channel=dev [--auto-play]`.
 
 ## Hard rule
 
